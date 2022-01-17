@@ -1,0 +1,8 @@
+.container {
+  flex-wrap: nowrap;
+  margin: 0 auto;
+  height: 100vh;
+  background-color: #373a41
+}
+
+

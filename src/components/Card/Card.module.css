@@ -1,0 +1,20 @@
+.card {
+  margin: 5px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid grey;
+  padding: 5px;
+  color: grey;
+  cursor: pointer;
+}
+
+.deleteBtn {
+  background-color: inherit;
+  border: none;
+}
+
+.deleteBtn img{
+  cursor: pointer;
+	width: 20px;
+  background-color:none;
+}

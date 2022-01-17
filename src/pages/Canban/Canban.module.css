@@ -1,0 +1,10 @@
+.container {
+  background-color: #373a41;
+  display: flex;
+  justify-content: space-around;
+  max-width: 1440px;
+  width: 100%;
+  padding:  100px auto;
+  display: flex;
+  /* align-items: flex-start; */
+}
