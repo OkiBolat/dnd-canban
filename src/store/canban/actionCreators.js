@@ -26,7 +26,7 @@ export const deleteCard = (payload) => ({
   payload
 });
 
-
+// THUNKS
 export const getCardsThunk = () => {
   return (dispatch) => {
     cardsService.getCards().then(({data}) => {

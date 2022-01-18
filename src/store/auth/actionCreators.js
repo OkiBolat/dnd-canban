@@ -10,6 +10,7 @@ export const logOut = () => ({
   type: LOG_OUT
 })
 
+// THUNKS
 export const logInThunk = (payload) => {
   return (dispatch) => {
     authService.logIn(payload).then(({data}) => {

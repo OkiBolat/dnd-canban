@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Droppable } from "react-beautiful-dnd";
 import { addCardThunk } from "../../store/canban/actionCreators";
@@ -10,6 +10,7 @@ import { COLUMN_COLORS } from "../../constants/colors";
 const Row = ({ row }) => {
   const dispatch = useDispatch()
   const cards = useSelector(cardsSelector)
+  const addRef = useRef(null);
 
   const [openAddForm, setOpenAddForm] = useState(false)
   const [textInput, setTextInput] = useState('')
@@ -37,6 +38,18 @@ const Row = ({ row }) => {
     setOpenAddForm(!openAddForm)
   }
 
+  useEffect(() => {
+    const outsideHandler = (e) => {
+      if (addRef?.current && !addRef.current?.contains(e.target)) {
+        setOpenAddForm(false)
+        setTextInput('')
+      }
+    }
+
+    document.addEventListener('mousedown', outsideHandler)
+    return () => document.removeEventListener('mousedown', outsideHandler)
+  }, []);
+
   return (
     <div className={styles.container}>
       <div style={{ backgroundColor: COLUMN_COLORS[row.id] }} className={styles.title}>{row.title}</div>
@@ -51,7 +64,7 @@ const Row = ({ row }) => {
         )}
       </Droppable>
       {openAddForm &&
-        <div className={styles.added}>
+        <div ref={addRef} className={styles.added}>
           <textarea value={textInput} onChange={onInputChange} name="textarea"></textarea>
           <button onClick={onAddCard} className={styles.addCardBtn}>Add card</button>
         </div>

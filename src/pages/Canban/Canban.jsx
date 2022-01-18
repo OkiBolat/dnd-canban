@@ -15,11 +15,10 @@ const Canban = () => {
     dispatch(getCardsThunk())
   }, [dispatch])
 
-  const onDragEnd = (props) => {
-    console.log(props)
-    if(!props.destination) return;
+  const onDragEnd = (data) => {
+    if(!data.destination) return;
   
-    dispatch(moveCardThunk(props))
+    dispatch(moveCardThunk(data))
   }
 
   return(

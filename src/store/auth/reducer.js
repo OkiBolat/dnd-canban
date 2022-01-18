@@ -4,7 +4,7 @@ const initialState = {
   isAuthorized: false
 }
 
-const authReducer = (state = initialState, { type, payload }) => {
+const authReducer = (state = initialState, { type }) => {
   switch (type) {
     case LOG_IN:
       return {
