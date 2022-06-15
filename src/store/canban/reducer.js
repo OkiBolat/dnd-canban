@@ -7,22 +7,22 @@ const initialState = {
   rows: {
     "0": {
       id: "0",
-      title: 'ON-HOLD',
+      title: 'НУЖНО ВЫПОЛНИТЬ',
       cards_ids: [],
     },
     "1": {
       id: "1",
-      title: 'IN-PROGRESS',
+      title: 'ВЫПОЛНЯЕТСЯ',
       cards_ids: [],
     },
     "2": {
       id: "2",
-      title: 'NEEDS_REVIEW',
+      title: 'НУЖНЫ РЕСУРСЫ',
       cards_ids: [],
     },
     "3": {
       id: "3",
-      title: 'APPROVED',
+      title: 'ВЫПОЛНЕНО',
       cards_ids: [],
     }
   }

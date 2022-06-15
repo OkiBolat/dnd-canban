@@ -58,8 +58,8 @@ export const moveCardThunk = (payload) => {
       id: payload.draggableId,
       row: payload.destination.droppableId,
       seq_num: payload.destination.index
-    }).then(() => {
-      dispatch(moveCard(payload))
     })
+      dispatch(moveCard(payload))
+    
   }
 }

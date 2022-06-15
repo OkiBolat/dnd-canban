@@ -6,6 +6,7 @@ import { cardsSelector } from "../../store/canban/selectors";
 import Card from "../Card/Card";
 import styles from "./Row.module.css"
 import { COLUMN_COLORS } from "../../constants/colors";
+import Loader from "../Loader";
 
 const Row = ({ row }) => {
   const dispatch = useDispatch()
@@ -53,16 +54,15 @@ const Row = ({ row }) => {
   return (
     <div className={styles.container}>
       <div style={{ backgroundColor: COLUMN_COLORS[row.id] }} className={styles.title}>{row.title}</div>
-      <Droppable droppableId={row.id}>
+      {!cards? <Loader />: <Droppable droppableId={row.id}>
         {(provided) => (
           <div className={styles.list} {...provided.droppableProps} ref={provided.innerRef}>
-
             {rowCards.map((card, index) => (
               <Card key={card.id} card={card} index={index} />
             ))}{provided.placeholder}
           </div>
         )}
-      </Droppable>
+      </Droppable>}
       {openAddForm &&
         <div ref={addRef} className={styles.added}>
           <textarea value={textInput} onChange={onInputChange} name="textarea"></textarea>

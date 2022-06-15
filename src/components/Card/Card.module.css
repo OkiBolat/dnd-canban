@@ -8,6 +8,17 @@
   cursor: pointer;
 }
 
+.cardId {
+  font-size: 10px;
+}
+.cardText {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 14px;
+}
+
 .deleteBtn {
   background-color: inherit;
   border: none;

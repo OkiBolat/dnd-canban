@@ -20,8 +20,8 @@ const Card = ({ card, index }) => {
           ref={provided.innerRef}
           {...provided.draggableProps}
           {...provided.dragHandleProps}>
-          <h5>ID:{card.id}</h5>
-          <p>{card.text}</p>
+          <span className={styles.cardId}>ID:{card.id}</span>
+          <p className={styles.cardText}>{card.text}</p>
           <button onClick={() => onDeleteCard(card)} className={styles.deleteBtn}>
             <img src={deleteImage} alt="delete" />
           </button>
