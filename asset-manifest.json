@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/dnd-canban/static/css/main.cb64e0b3.css",
-    "main.js": "/dnd-canban/static/js/main.fb4dd05d.js",
+    "main.js": "/dnd-canban/static/js/main.d64f5544.js",
     "index.html": "/dnd-canban/index.html",
     "main.cb64e0b3.css.map": "/dnd-canban/static/css/main.cb64e0b3.css.map",
-    "main.fb4dd05d.js.map": "/dnd-canban/static/js/main.fb4dd05d.js.map"
+    "main.d64f5544.js.map": "/dnd-canban/static/js/main.d64f5544.js.map"
   },
   "entrypoints": [
     "static/css/main.cb64e0b3.css",
-    "static/js/main.fb4dd05d.js"
+    "static/js/main.d64f5544.js"
   ]
 }
